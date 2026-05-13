@@ -1,0 +1,74 @@
+/* Calming accents and motion — complements Tailwind CDN */
+:root {
+  --ink: #1c2e2a;
+  --mist: #e8f0ed;
+  --sage: #6b9080;
+  --sage-dark: #4a6b5f;
+  --sand: #f6f1ea;
+  --accent: #7c9a92;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .testimonial-track,
+  .fade-up {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+body {
+  color: var(--ink);
+  background-color: var(--sand);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: "Fraunces", ui-serif, Georgia, serif;
+}
+
+.font-body {
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+/* Soft gradient wash behind hero */
+.hero-wash {
+  background:
+    radial-gradient(120% 80% at 10% 0%, rgba(108, 144, 130, 0.18), transparent 55%),
+    radial-gradient(90% 70% at 90% 10%, rgba(232, 240, 237, 0.9), transparent 50%),
+    linear-gradient(180deg, #f6f1ea 0%, #eef4f1 45%, #f6f1ea 100%);
+}
+
+/* Testimonials slider */
+.testimonial-viewport {
+  overflow: hidden;
+  min-height: 14rem;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.testimonial-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--sage-dark);
+  outline-offset: 3px;
+}
+
+/* Subtle card lift */
+.card-calm {
+  box-shadow:
+    0 1px 1px rgba(28, 46, 42, 0.04),
+    0 8px 24px rgba(28, 46, 42, 0.06);
+}
