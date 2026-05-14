@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Racket Connect — Affordable Badminton Coaching for Kids & Students | Kepong • PJ • KL</title>
+  <meta name="description" content="Racket Connect is a friendly badminton academy in Kepong, Petaling Jaya and Kuala Lumpur, offering structured, affordable coaching for kids, children and students. Send an inquiry or chat with us on WhatsApp today." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Animated background layers -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Primary">
+      <a href="#top" class="brand" aria-label="Racket Connect home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="7"></circle>
+            <path d="M12 5v14M5 12h14"></path>
+            <path d="M17 17l9 9"></path>
+          </svg>
+        </span>
+        <span class="brand-text">Racket<span class="brand-accent">Connect</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#inquiry">Inquiry</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#inquiry">Send Inquiry</a>
+        <a class="btn btn-primary" id="navWhatsApp" href="https://wa.me/60123456789?text=Hi%20Racket%20Connect%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20classes." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <span class="pill">
+            <span class="pulse-dot"></span> Now coaching in Kepong • PJ • KL
+          </span>
+          <h1>
+            Smarter badminton coaching for
+            <span class="grad-text">kids &amp; students</span>
+            — without the heavy price tag.
+          </h1>
+          <p class="lead">
+            Racket Connect is a friendly academy built around fundamentals, fun and steady progress. Small groups, patient coaches, and class fees that actually make sense for families.
+          </p>
+          <div class="hero-cta">
+            <a href="#inquiry" class="btn btn-primary btn-lg">
+              Send an Inquiry
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+            <a href="https://wa.me/60123456789?text=Hi%20Racket%20Connect%2C%20I%27d%20like%20to%20enquire%20about%20kids%20badminton%20classes." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+          <ul class="hero-trust" role="list">
+            <li><strong>Ages 5–17</strong><span>beginner to intermediate</span></li>
+            <li><strong>4–8</strong><span>students per group</span></li>
+            <li><strong>From RM25</strong><span>per session*</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="card-3d glass">
+            <div class="court">
+              <span class="court-line court-line-net"></span>
+              <span class="court-line court-line-h1"></span>
+              <span class="court-line court-line-h2"></span>
+              <span class="court-line court-line-v"></span>
+            </div>
+            <div class="shuttle">
+              <svg viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M32 8 L24 24 L40 24 Z"></path>
+                <path d="M32 8 L20 28 L44 28 Z" opacity="0.5"></path>
+                <ellipse cx="32" cy="44" rx="10" ry="6"></ellipse>
+                <path d="M32 24 L32 44"></path>
+              </svg>
+            </div>
+            <div class="floating-chip chip-1 glass-inner">
+              <span class="dot dot-green"></span> Trial class available
+            </div>
+            <div class="floating-chip chip-2 glass-inner">
+              <span class="dot dot-blue"></span> Friendly coaches
+            </div>
+            <div class="floating-chip chip-3 glass-inner">
+              <span class="dot dot-pink"></span> Small groups
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee strip -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Footwork</span><span>•</span><span>Smashes</span><span>•</span><span>Net Play</span><span>•</span><span>Drills</span><span>•</span><span>Match Practice</span><span>•</span><span>Stamina</span><span>•</span><span>Discipline</span><span>•</span><span>Confidence</span><span>•</span>
+        <span>Footwork</span><span>•</span><span>Smashes</span><span>•</span><span>Net Play</span><span>•</span><span>Drills</span><span>•</span><span>Match Practice</span><span>•</span><span>Stamina</span><span>•</span><span>Discipline</span><span>•</span><span>Confidence</span><span>•</span>
+      </div>
+    </section>
+
+    <!-- About / Why us -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why Racket Connect</span>
+          <h2>Coaching that grows with your child — at a price that makes sense.</h2>
+          <p class="muted">
+            We keep things simple: clear progression, supportive coaches, and class sizes small enough that every kid actually gets time on court. No flashy promises — just steady improvement and a lot of fun along the way.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"></path></svg>
+            </div>
+            <h3>Affordable, transparent fees</h3>
+            <p>Class packages are priced for everyday families — no surprise charges, no hard-sell. Pay per term or per session, whichever works for you.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><circle cx="17" cy="10" r="2.5"></circle><path d="M2.5 19c.7-3.2 3.4-5 6.5-5s5.8 1.8 6.5 5"></path><path d="M14.5 19c.5-2.2 2.3-3.5 4.5-3.5s3 1 3.5 3"></path></svg>
+            </div>
+            <h3>Small groups, real attention</h3>
+            <p>We cap groups at 4–8 students so coaches can actually watch each player, fix technique early, and keep practice engaging.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"></path></svg>
+            </div>
+            <h3>Progress you can see</h3>
+            <p>Beginner, foundation, and competitive tracks. Every term we share a short progress note so parents know what their child is working on.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"></path><path d="M9 12l2 2 4-4"></path></svg>
+            </div>
+            <h3>Safe &amp; encouraging space</h3>
+            <p>Friendly coaches, clear rules, warm-ups before every session. We want kids to feel welcome — especially the shy first-timers.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </div>
+            <h3>Flexible time slots</h3>
+            <p>Weekday evenings and weekend mornings across all three locations. Easy for school-going kids and busy parents.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"></path></svg>
+            </div>
+            <h3>Free trial class</h3>
+            <p>Not sure yet? Book a trial session first — your child can give badminton a real try before committing to a term.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Programs</span>
+          <h2>Three tracks. One smooth journey from first racket to first match.</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="program glass reveal">
+            <div class="program-head">
+              <span class="tag tag-mint">Ages 5–8</span>
+              <h3>Little Smashers</h3>
+            </div>
+            <p>A playful intro to footwork, grip and rallies. We focus on coordination, confidence and making sure kids enjoy being on court.</p>
+            <ul class="ticks" role="list">
+              <li>Foundational footwork &amp; grip</li>
+              <li>Fun drills &amp; mini-games</li>
+              <li>Confidence building</li>
+            </ul>
+            <a href="#inquiry" class="btn btn-outline">Ask about this class</a>
+          </article>
+
+          <article class="program glass reveal program-featured">
+            <div class="program-head">
+              <span class="tag tag-blue">Ages 9–13</span>
+              <h3>Foundation Builders</h3>
+            </div>
+            <p>Where technique gets sharper. Players learn clears, drops, net shots and proper rotation in doubles — with structured practice every session.</p>
+            <ul class="ticks" role="list">
+              <li>Clears, drops, net shots</li>
+              <li>Singles &amp; doubles basics</li>
+              <li>Match practice with coach feedback</li>
+            </ul>
+            <a href="#inquiry" class="btn btn-primary">Ask about this class</a>
+          </article>
+
+          <article class="program glass reveal">
+            <div class="program-head">
+              <span class="tag tag-pink">Ages 14–17</span>
+              <h3>Student Athletes</h3>
+            </div>
+            <p>For students who want to take it further — better stamina, smarter shot selection, and proper match play. Great for school team prep too.</p>
+            <ul class="ticks" role="list">
+              <li>Advanced footwork &amp; smashes</li>
+              <li>Stamina &amp; agility work</li>
+              <li>Match strategy &amp; scoring</li>
+            </ul>
+            <a href="#inquiry" class="btn btn-outline">Ask about this class</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Locations -->
+    <section id="locations" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Where we play</span>
+          <h2>Three convenient locations across the Klang Valley.</h2>
+          <p class="muted">Pick the spot closest to you. Each venue has proper courts, good lighting, and easy parking for drop-off.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="location glass reveal">
+            <div class="loc-pin">KEP</div>
+            <h3>Kepong</h3>
+            <p class="muted">Weeknights &amp; weekend mornings</p>
+            <ul class="dot-list" role="list">
+              <li>Beginner &amp; foundation classes</li>
+              <li>Easy parking, near main road</li>
+              <li>Family-friendly waiting area</li>
+            </ul>
+          </article>
+
+          <article class="location glass reveal">
+            <div class="loc-pin">PJ</div>
+            <h3>Petaling Jaya</h3>
+            <p class="muted">Weeknights &amp; weekends</p>
+            <ul class="dot-list" role="list">
+              <li>All age groups</li>
+              <li>Air-conditioned courts</li>
+              <li>Match practice slots available</li>
+            </ul>
+          </article>
+
+          <article class="location glass reveal">
+            <div class="loc-pin">KL</div>
+            <h3>Kuala Lumpur</h3>
+            <p class="muted">Weekday evenings &amp; weekends</p>
+            <ul class="dot-list" role="list">
+              <li>Foundation &amp; student athletes</li>
+              <li>Central, accessible by public transport</li>
+              <li>Competitive sparring sessions</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / trust -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Parents &amp; players</span>
+          <h2>Friendly coaching, real progress.</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <figure class="quote glass reveal">
+            <blockquote>"My son was shy and barely held a racket properly. After one term, he's rallying confidently and actually asks to go to practice."</blockquote>
+            <figcaption>— Parent, Kepong</figcaption>
+          </figure>
+          <figure class="quote glass reveal">
+            <blockquote>"The coaches are patient and they really pay attention to each kid. Class size is small enough that no one gets left behind."</blockquote>
+            <figcaption>— Parent, Petaling Jaya</figcaption>
+          </figure>
+          <figure class="quote glass reveal">
+            <blockquote>"Honestly the fees are the most reasonable we've found in KL. Quality is great and the vibe is super friendly."</blockquote>
+            <figcaption>— Parent, Kuala Lumpur</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry form -->
+    <section id="inquiry" class="section">
+      <div class="container">
+        <div class="inquiry-wrap">
+          <div class="inquiry-copy reveal">
+            <span class="eyebrow">Get started</span>
+            <h2>Send us a quick inquiry.</h2>
+            <p class="muted">
+              Tell us a little about your child or student and we'll get back to you with class times, available slots and fees. Prefer a quick chat? Hit the WhatsApp button below — we usually reply within a few hours.
+            </p>
+
+            <ul class="contact-list" role="list">
+              <li>
+                <span class="contact-ico">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92V21a1 1 0 0 1-1.1 1A19.86 19.86 0 0 1 2 3.1 1 1 0 0 1 3 2h4.09a1 1 0 0 1 1 .75c.2.96.52 1.88.94 2.74a1 1 0 0 1-.22 1.11L7.21 8.21a16 16 0 0 0 8.58 8.58l1.61-1.6a1 1 0 0 1 1.11-.22c.86.42 1.78.74 2.74.94a1 1 0 0 1 .75 1Z"/></svg>
+                </span>
+                <div>
+                  <strong>Call / Text</strong>
+                  <a href="tel:+60123456789">+60 12-345 6789</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact-ico">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                </span>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:hello@racketconnect.my">hello@racketconnect.my</a>
+                </div>
+              </li>
+              <li>
+                <span class="contact-ico">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.58-7-12a7 7 0 0 1 14 0c0 4.42-7 12-7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </span>
+                <div>
+                  <strong>Main hub</strong>
+                  <span>No. 1, Jalan Badminton, 52100 Kepong, Kuala Lumpur</span>
+                </div>
+              </li>
+            </ul>
+
+            <a class="btn btn-whatsapp btn-lg" id="ctaWhatsApp" href="https://wa.me/60123456789?text=Hi%20Racket%20Connect%2C%20I%27d%20like%20to%20enquire%20about%20classes." target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+              Chat on WhatsApp instead
+            </a>
+          </div>
+
+          <form id="inquiryForm" class="inquiry-form glass reveal" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+            <div class="form-row">
+              <label class="field">
+                <span class="field-label">Parent / Student name</span>
+                <input type="text" name="name" id="f-name" required minlength="2" placeholder="e.g. Aisha Tan" autocomplete="name" />
+              </label>
+              <label class="field">
+                <span class="field-label">Student age</span>
+                <input type="number" name="age" id="f-age" min="4" max="21" required placeholder="e.g. 9" inputmode="numeric" />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label class="field">
+                <span class="field-label">Phone</span>
+                <input type="tel" name="phone" id="f-phone" required pattern="[0-9 +()-]{8,}" placeholder="e.g. 012-345 6789" autocomplete="tel" />
+              </label>
+              <label class="field">
+                <span class="field-label">Preferred location</span>
+                <select name="location" id="f-location" required>
+                  <option value="" disabled selected>Choose one…</option>
+                  <option value="Kepong">Kepong</option>
+                  <option value="Petaling Jaya">Petaling Jaya</option>
+                  <option value="Kuala Lumpur">Kuala Lumpur</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label class="field">
+                <span class="field-label">Preferred class time</span>
+                <select name="time" id="f-time" required>
+                  <option value="" disabled selected>Choose one…</option>
+                  <option value="Weekday evening">Weekday evening</option>
+                  <option value="Weekend morning">Weekend morning</option>
+                  <option value="Weekend afternoon">Weekend afternoon</option>
+                  <option value="Flexible">Flexible</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field-label">Experience level</span>
+                <select name="level" id="f-level">
+                  <option value="Beginner" selected>Beginner</option>
+                  <option value="Some experience">Some experience</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="School team">School team</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field-label">Anything else? <span class="muted">(optional)</span></span>
+              <textarea name="message" id="f-message" rows="4" placeholder="Tell us about your goals, schedule, or questions…"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                Send inquiry
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+              </button>
+              <button type="button" class="btn btn-whatsapp btn-lg" id="sendViaWhatsApp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37Z"/></svg>
+                Send via WhatsApp
+              </button>
+            </div>
+
+            <p class="form-note muted">
+              By submitting, you agree we may contact you about classes. We'll never share your info.
+            </p>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Good to know</span>
+          <h2>Quick questions, quick answers.</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item glass reveal">
+            <summary>Do you offer a trial class?</summary>
+            <p>Yes. New students can book a trial session so you can see if it's a good fit before signing up for a term.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>What should my child bring?</summary>
+            <p>Comfortable sports attire, court shoes (non-marking), a water bottle, and a racket if you have one. We can lend a spare racket for trial sessions.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>How are classes structured?</summary>
+            <p>Each session includes warm-up, drills focused on a specific skill, mini-games or match practice, and a cool-down. We rotate focus areas weekly.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>How is pricing different from market rates?</summary>
+            <p>We keep overheads lean and pass the savings on to families. Term packages are designed to be friendlier on the wallet without cutting coaching quality.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>Can I switch locations or class times mid-term?</summary>
+            <p>Where possible, yes — just let us know early and we'll try to fit you into a suitable slot.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="7"></circle>
+              <path d="M12 5v14M5 12h14"></path>
+              <path d="M17 17l9 9"></path>
+            </svg>
+          </span>
+          <span class="brand-text">Racket<span class="brand-accent">Connect</span></span>
+        </div>
+        <p class="muted small">Friendly, affordable badminton coaching for kids and students in Kepong, Petaling Jaya and Kuala Lumpur.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <strong>Visit</strong>
+          <p class="small muted">No. 1, Jalan Badminton<br/>52100 Kepong, KL</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p class="small muted">
+            <a href="tel:+60123456789">+60 12-345 6789</a><br/>
+            <a href="mailto:hello@racketconnect.my">hello@racketconnect.my</a>
+          </p>
+        </div>
+        <div>
+          <strong>Hours</strong>
+          <p class="small muted">Mon–Fri · 4pm–9pm<br/>Sat–Sun · 9am–6pm</p>
+        </div>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <span class="small muted">© <span id="year"></span> Racket Connect. All rights reserved.</span>
+      <span class="small muted">*Indicative pricing — final fees confirmed at enrollment.</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="fab" id="fabWhatsApp" href="https://wa.me/60123456789?text=Hi%20Racket%20Connect%2C%20I%27d%20like%20to%20enquire%20about%20classes." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+  </a>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const burger = document.getElementById('navBurger');
+    const navLinks = document.querySelector('.nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        burger.setAttribute('aria-expanded', String(open));
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Smooth scroll (native via CSS, but ensure offsets for fixed nav)
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const id = link.getAttribute('href');
+        if (id && id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) {
+            e.preventDefault();
+            const top = el.getBoundingClientRect().top + window.scrollY - 80;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(el => io.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('in'));
+    }
+
+    // Parallax tilt for hero card
+    const card = document.querySelector('.card-3d');
+    if (card && window.matchMedia('(pointer:fine)').matches) {
+      const wrap = card.parentElement;
+      wrap.addEventListener('mousemove', (e) => {
+        const r = wrap.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `rotateY(${x * 8}deg) rotateX(${ -y * 8 }deg) translateZ(0)`;
+      });
+      wrap.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    }
+
+    // WhatsApp deep-link builder from form
+    const WHATSAPP_NUMBER = '60123456789';
+
+    function buildInquiryMessage() {
+      const f = document.getElementById('inquiryForm');
+      const get = (id) => (f.querySelector('#' + id)?.value || '').trim();
+      const name = get('f-name') || '—';
+      const age = get('f-age') || '—';
+      const phone = get('f-phone') || '—';
+      const location = get('f-location') || '—';
+      const time = get('f-time') || '—';
+      const level = get('f-level') || '—';
+      const msg = get('f-message');
+
+      const lines = [
+        'Hi Racket Connect! I\'d like to enquire about classes.',
+        '',
+        `• Name: ${name}`,
+        `• Age: ${age}`,
+        `• Phone: ${phone}`,
+        `• Location: ${location}`,
+        `• Preferred time: ${time}`,
+        `• Level: ${level}`,
+      ];
+      if (msg) {
+        lines.push(`• Note: ${msg}`);
+      }
+      return lines.join('\n');
+    }
+
+    const sendViaWhatsAppBtn = document.getElementById('sendViaWhatsApp');
+    if (sendViaWhatsAppBtn) {
+      sendViaWhatsAppBtn.addEventListener('click', () => {
+        const text = encodeURIComponent(buildInquiryMessage());
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank', 'noopener');
+      });
+    }
+
+    // Form submission — graceful UX with placeholder endpoint
+    const form = document.getElementById('inquiryForm');
+    const status = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        status.textContent = '';
+        status.className = 'form-status';
+
+        if (!form.checkValidity()) {
+          status.textContent = 'Please fill in the required fields.';
+          status.classList.add('error');
+          form.reportValidity();
+          return;
+        }
+
+        const actionUrl = form.getAttribute('action') || '';
+        const isPlaceholder = actionUrl.includes('your-form-id') || !/^https?:/i.test(actionUrl);
+
+        if (isPlaceholder) {
+          // No backend yet — fall back to WhatsApp so the inquiry still reaches us.
+          const text = encodeURIComponent(buildInquiryMessage());
+          status.textContent = 'Opening WhatsApp to send your inquiry…';
+          status.classList.add('success');
+          window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, '_blank', 'noopener');
+          form.reset();
+          return;
+        }
+
+        try {
+          submitBtn.disabled = true;
+          submitBtn.classList.add('loading');
+          const data = new FormData(form);
+          const res = await fetch(actionUrl, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            status.textContent = 'Thanks! Your inquiry has been sent. We\'ll reply soon.';
+            status.classList.add('success');
+            form.reset();
+          } else {
+            throw new Error('Request failed');
+          }
+        } catch (err) {
+          status.textContent = 'Something went wrong. Please try WhatsApp or email us directly.';
+          status.classList.add('error');
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove('loading');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
