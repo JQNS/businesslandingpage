@@ -229,7 +229,8 @@ ul, ol { list-style: none; }
 .hero { padding: 140px 0 88px; }
 .hero-inner {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 64px; align-items: center;
+  gap: 64px;
+  align-items: start;
 }
 
 .hero-copy h1 {
@@ -253,13 +254,30 @@ ul, ol { list-style: none; }
 }
 .hero-trust span { font-size: 0.78rem; color: var(--muted); }
 
-/* Hero visual */
-.hero-visual { display: flex; justify-content: center; align-items: center; }
-.card-stack-wrap { position: relative; width: 300px; height: 420px; }
+/* Hero visual — stack sits toward the column centre (gap) so it lines up with the copy */
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 6px;
+  min-height: 200px;
+}
+
+.card-stack-wrap {
+  position: relative;
+  width: 300px;
+  height: 420px;
+  isolation: isolate;
+  flex-shrink: 0;
+}
 
 .card-3d {
-  position: relative; width: 100%; height: 100%;
-  border-radius: 18px; overflow: hidden;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  overflow: hidden;
   transition: transform .3s ease;
   box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(255,222,0,0.1);
 }
@@ -320,28 +338,38 @@ ul, ol { list-style: none; }
 .card-hp span { font-size: 0.65rem; opacity: 0.7; }
 
 .card-shadow-1, .card-shadow-2 {
-  position: absolute; border-radius: 18px;
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
   pointer-events: none;
 }
-.card-shadow-1 {
-  inset: 0; transform: translate(10px, 14px) scale(0.97);
-  opacity: 0.4; z-index: -1;
-}
 .card-shadow-2 {
-  inset: 0; transform: translate(20px, 26px) scale(0.93);
-  opacity: 0.2; z-index: -2;
+  transform: translate(20px, 26px) scale(0.93);
+  opacity: 0.2;
+  z-index: 0;
+}
+.card-shadow-1 {
+  transform: translate(10px, 14px) scale(0.97);
+  opacity: 0.4;
+  z-index: 1;
 }
 
-/* Floating chips */
+/* Floating chips (siblings of .card-3d — not clipped by card overflow) */
 .floating-chip {
-  position: absolute; font-size: 0.74rem; font-weight: 700;
-  padding: 6px 12px; border-radius: 100px;
-  display: flex; align-items: center; gap: 7px; z-index: 3;
+  position: absolute;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  z-index: 3;
   white-space: nowrap;
 }
-.chip-1 { bottom: 80px; left: -40px; animation: floatA 3s ease-in-out infinite alternate; }
-.chip-2 { top: 80px; right: -44px; animation: floatB 3.5s ease-in-out infinite alternate; }
-.chip-3 { bottom: 30px; right: -38px; animation: floatA 4s ease-in-out infinite alternate; }
+.chip-1 { bottom: 88px; left: -36px; animation: floatA 3s ease-in-out infinite alternate; }
+.chip-2 { top: 72px; right: -40px; animation: floatB 3.5s ease-in-out infinite alternate; }
+.chip-3 { bottom: 28px; right: -32px; animation: floatA 4s ease-in-out infinite alternate; }
 
 @keyframes floatA { from { transform: translateY(0); } to { transform: translateY(-8px); } }
 @keyframes floatB { from { transform: translateY(0); } to { transform: translateY(8px); } }
@@ -351,6 +379,13 @@ ul, ol { list-style: none; }
 .dot-red    { background: var(--red-2); }
 .dot-blue   { background: var(--blue); }
 .dot-green  { background: var(--green); }
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .hero-inner { gap: 40px; }
+  .chip-1 { left: -28px; }
+  .chip-2 { right: -28px; }
+  .chip-3 { right: -24px; }
+}
 
 @media (max-width: 820px) {
   .hero-inner { grid-template-columns: 1fr; gap: 48px; }
