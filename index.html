@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TCG MY — Trusted Pokémon Card Shop | Buy · Sell · Trade · Consign | Amcorp Mall, PJ</title>
+  <meta name="description" content="TCG MY is your trusted Pokémon TCG specialist at Amcorp Mall, Petaling Jaya. Buy, sell, trade and consign Pokémon cards with confidence. Walk in or WhatsApp us today." />
+  <meta name="theme-color" content="#0c0e1a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Pokéball ambient orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav-wrap">
+    <nav class="nav glass" aria-label="Primary">
+      <a href="#top" class="brand" aria-label="TCG MY home">
+        <span class="brand-mark" aria-hidden="true">
+          <!-- Pokéball icon -->
+          <svg viewBox="0 0 32 32" width="30" height="30" fill="none">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 16h28" stroke="currentColor" stroke-width="2"/>
+            <circle cx="16" cy="16" r="4" fill="currentColor"/>
+            <circle cx="16" cy="16" r="2.5" fill="#0c0e1a" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <span class="brand-text">TCG<span class="brand-accent">MY</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#services">What We Do</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#location">Find Us</a>
+        <a class="btn btn-primary" id="navWhatsApp"
+           href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27d%20like%20to%20enquire%20about%20Pokemon%20cards."
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ░░ HERO ░░ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <span class="pill">
+            <span class="pulse-dot"></span> Now at Amcorp Mall, Petaling Jaya
+          </span>
+          <h1>
+            Malaysia's trusted<br/>
+            <span class="grad-text">Pokémon card</span><br/>
+            specialist.
+          </h1>
+          <p class="lead">
+            Buy, sell, trade or consign your Pokémon cards with a team that knows the hobby inside out. Walk in at Amcorp Mall or drop us a WhatsApp — we reply fast.
+          </p>
+          <div class="hero-cta">
+            <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27d%20like%20to%20enquire%20about%20Pokemon%20cards."
+               class="btn btn-primary btn-lg" target="_blank" rel="noopener" id="heroWA">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+              Chat on WhatsApp
+            </a>
+            <a href="#location" class="btn btn-outline btn-lg">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s-7-7.58-7-12a7 7 0 0 1 14 0c0 4.42-7 12-7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Visit the Shop
+            </a>
+          </div>
+          <ul class="hero-trust" role="list">
+            <li><strong>Buy</strong><span>fair market price</span></li>
+            <li><strong>Sell</strong><span>singles &amp; sealed</span></li>
+            <li><strong>Trade</strong><span>value for value</span></li>
+            <li><strong>Consign</strong><span>we sell for you</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="card-stack-wrap">
+            <!-- Decorative holographic card stack -->
+            <div class="card-3d glass holo-card" id="heroCard">
+              <div class="pokeball-bg"></div>
+              <div class="card-inner-content">
+                <div class="card-type-label">Pokémon TCG</div>
+                <div class="card-art-placeholder">
+                  <svg viewBox="0 0 80 80" width="80" height="80" fill="none">
+                    <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="3" opacity="0.6"/>
+                    <path d="M4 40h72" stroke="currentColor" stroke-width="3" opacity="0.6"/>
+                    <circle cx="40" cy="40" r="10" fill="currentColor" opacity="0.8"/>
+                    <circle cx="40" cy="40" r="6" fill="#0c0e1a" stroke="currentColor" stroke-width="2.5" opacity="0.9"/>
+                  </svg>
+                </div>
+                <div class="card-label">TCG MY</div>
+                <div class="card-sublabel">Trusted TCG Reseller · PJ</div>
+                <div class="card-hp"><span>HP</span> ✦✦✦✦✦</div>
+              </div>
+              <div class="floating-chip chip-1 glass-inner"><span class="dot dot-yellow"></span> Grade-ready singles</div>
+              <div class="floating-chip chip-2 glass-inner"><span class="dot dot-red"></span> Sealed stock</div>
+              <div class="floating-chip chip-3 glass-inner"><span class="dot dot-blue"></span> Fair trade-ins</div>
+            </div>
+            <div class="card-shadow-1 glass"></div>
+            <div class="card-shadow-2 glass"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ MARQUEE ░░ -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Pokémon Cards</span><span>⬥</span><span>Buy</span><span>⬥</span><span>Sell</span><span>⬥</span><span>Trade</span><span>⬥</span><span>Consign</span><span>⬥</span><span>Sealed Packs</span><span>⬥</span><span>Singles</span><span>⬥</span><span>Slabs</span><span>⬥</span><span>PSA Graded</span><span>⬥</span><span>Rare Pulls</span><span>⬥</span><span>Amcorp Mall PJ</span><span>⬥</span>
+        <span>Pokémon Cards</span><span>⬥</span><span>Buy</span><span>⬥</span><span>Sell</span><span>⬥</span><span>Trade</span><span>⬥</span><span>Consign</span><span>⬥</span><span>Sealed Packs</span><span>⬥</span><span>Singles</span><span>⬥</span><span>Slabs</span><span>⬥</span><span>PSA Graded</span><span>⬥</span><span>Rare Pulls</span><span>⬥</span><span>Amcorp Mall PJ</span><span>⬥</span>
+      </div>
+    </section>
+
+    <!-- ░░ SERVICES ░░ -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What We Do</span>
+          <h2>One shop for every Pokémon TCG need.</h2>
+          <p class="muted">Whether you're hunting a chase card, clearing a binder or looking to grow a collection — we've got you covered.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="service-card glass reveal">
+            <div class="service-icon service-icon-yellow">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3>Buy Cards</h3>
+            <p>Shop our ever-changing stock of singles, sealed product and graded slabs. From commons to ultra-rares.</p>
+            <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27m%20looking%20to%20buy%20some%20Pokemon%20cards.%20What%20do%20you%20have%20in%20stock%3F"
+               class="service-link" target="_blank" rel="noopener">Ask about stock →</a>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-icon service-icon-red">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Sell Cards</h3>
+            <p>Get fair value for your cards. Bring them in or WhatsApp photos for a quick quote. Walk out with cash same day.</p>
+            <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%20have%20some%20Pokemon%20cards%20I%27d%20like%20to%20sell.%20Can%20I%20get%20a%20quote%3F"
+               class="service-link" target="_blank" rel="noopener">Get a quote →</a>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-icon service-icon-blue">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4m0 0L3 8m4-4 4 4"/><path d="M17 8v12m0 0 4-4m-4 4-4-4"/></svg>
+            </div>
+            <h3>Trade Cards</h3>
+            <p>Have something we want? We trade value for value. Bring your binder and let's make a deal that works for both sides.</p>
+            <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27m%20interested%20in%20trading%20some%20Pokemon%20cards.%20Can%20we%20arrange%20a%20time%3F"
+               class="service-link" target="_blank" rel="noopener">Arrange a trade →</a>
+          </article>
+
+          <article class="service-card glass reveal">
+            <div class="service-icon service-icon-green">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+            </div>
+            <h3>Consignment</h3>
+            <p>Don't want to sell at a lower price? Leave your cards with us. We list, sell and pass the earnings back to you.</p>
+            <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27d%20like%20to%20know%20more%20about%20consigning%20my%20Pokemon%20cards."
+               class="service-link" target="_blank" rel="noopener">Learn how it works →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ WHY US ░░ -->
+    <section id="why-us" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Why TCG MY</span>
+          <h2>A shop built by collectors, <span class="grad-text">for collectors.</span></h2>
+          <p class="muted">We've been in the hobby long enough to know what fair means — and what bad experiences feel like. We do things differently.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+            </div>
+            <h3>Trusted & transparent</h3>
+            <p>We give honest pricing, explain condition grades clearly, and never pressure you into a deal. Your trust is the whole business.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.58-7-12a7 7 0 0 1 14 0c0 4.42-7 12-7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <h3>Physical shop you can walk into</h3>
+            <p>No need to risk online deals or meet strangers. Come see the cards in person, inspect grading and leave happy — at Amcorp Mall PJ.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </div>
+            <h3>Fast replies, quick deals</h3>
+            <p>WhatsApp us and we reply fast. Got a specific card in mind? Tell us and we'll check. No 3-day waiting games.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Condition graded honestly</h3>
+            <p>We grade every card carefully — NM, LP, MP, HP, Damaged. No surprises when you receive or inspect cards in-store.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M12 12h.01"/><path d="M17 12h.01"/><path d="M7 12h.01"/></svg>
+            </div>
+            <h3>Sealed product available</h3>
+            <p>Latest booster boxes, elite trainer boxes and tins in stock. Chase those pulls with fresh sealed product straight from us.</p>
+          </article>
+
+          <article class="feature glass reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="10" r="2.5"/><path d="M2.5 19c.7-3.2 3.4-5 6.5-5s5.8 1.8 6.5 5"/><path d="M14.5 19c.5-2.2 2.3-3.5 4.5-3.5s3 1 3.5 3"/></svg>
+            </div>
+            <h3>Community first</h3>
+            <p>We're Pokémon players and collectors ourselves. The hobby matters to us — and we love seeing others get into it too.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ SOCIAL PROOF ░░ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What Customers Say</span>
+          <h2>Real people, real deals.</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <figure class="quote glass reveal">
+            <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+            <blockquote>"Sold my old collection here — got a really fair price and the whole process was smooth. Will definitely consign with them again."</blockquote>
+            <figcaption>— Jason T., Kuala Lumpur</figcaption>
+          </figure>
+          <figure class="quote glass reveal">
+            <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+            <blockquote>"Best place in PJ to find singles. They always have cards I can't find elsewhere and the condition grading is accurate. No nonsense."</blockquote>
+            <figcaption>— Mei Ling, Subang Jaya</figcaption>
+          </figure>
+          <figure class="quote glass reveal">
+            <div class="quote-stars" aria-label="5 stars">★★★★★</div>
+            <blockquote>"Traded in my duplicate pulls and left with exactly what I needed. The team knows their stuff — super knowledgeable and friendly."</blockquote>
+            <figcaption>— Amir F., Petaling Jaya</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ LOCATION ░░ -->
+    <section id="location" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Find Us</span>
+          <h2>We're at <span class="grad-text">Amcorp Mall</span>, Petaling Jaya.</h2>
+          <p class="muted">Walk in during opening hours or drop a WhatsApp before you come — we'll make sure the cards you need are ready for you.</p>
+        </div>
+
+        <div class="location-wrap">
+          <div class="location-details glass reveal">
+            <div class="loc-block">
+              <div class="loc-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.58-7-12a7 7 0 0 1 14 0c0 4.42-7 12-7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              </div>
+              <div>
+                <strong>Address</strong>
+                <p class="muted">TCG MY<br/>Amcorp Mall, Jalan Persiaran Barat<br/>46050 Petaling Jaya, Selangor</p>
+                <a href="https://maps.google.com/?q=Amcorp+Mall+Petaling+Jaya" target="_blank" rel="noopener" class="map-link">Open in Google Maps →</a>
+              </div>
+            </div>
+
+            <div class="loc-block">
+              <div class="loc-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </div>
+              <div>
+                <strong>Opening Hours</strong>
+                <p class="muted">Mon – Fri &nbsp;·&nbsp; 11am – 9pm<br/>Sat – Sun &nbsp;·&nbsp; 10am – 9pm<br/><span class="badge-open" id="shopStatus">Checking hours…</span></p>
+              </div>
+            </div>
+
+            <div class="loc-block">
+              <div class="loc-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27d%20like%20to%20enquire%20about%20Pokemon%20cards."
+                   target="_blank" rel="noopener" class="wa-link">+60X-XXXX XXXX</a>
+                <p class="muted small">We reply same day — usually within the hour.</p>
+              </div>
+            </div>
+
+            <div class="loc-ctas">
+              <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27m%20on%20my%20way%20to%20the%20shop!%20Please%20let%20me%20know%20if%20you%27re%20open."
+                 class="btn btn-whatsapp" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37Z"/></svg>
+                I'm on my way!
+              </a>
+              <a href="https://maps.google.com/?q=Amcorp+Mall+Petaling+Jaya"
+                 class="btn btn-ghost" target="_blank" rel="noopener">
+                Get Directions
+              </a>
+            </div>
+          </div>
+
+          <div class="map-embed reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0!2d101.6382!3d3.1081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4bc7aa7c2bef%3A0x8c7a2e4e7b3a2f2e!2sAmcorp+Mall%2C+Petaling+Jaya!5e0!3m2!1sen!2smy!4v1234567890"
+              width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="TCG MY location at Amcorp Mall, Petaling Jaya">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ CONTACT CTA ░░ -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-band glass reveal">
+          <div class="cta-band-pokeball" aria-hidden="true"></div>
+          <div class="cta-copy">
+            <h2>Got a card you want to buy, sell or trade?</h2>
+            <p class="muted">Drop us a WhatsApp with photos or just come in. No appointment needed — just walk in during opening hours.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27d%20like%20to%20enquire%20about%20Pokemon%20cards."
+               class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37Z"/></svg>
+              WhatsApp Us Now
+            </a>
+            <a href="#location" class="btn btn-outline btn-lg">Find the Shop</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ FAQ ░░ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Good to Know</span>
+          <h2>Common questions, quick answers.</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item glass reveal">
+            <summary>How does selling my cards work?</summary>
+            <p>WhatsApp us clear photos of your cards (front and back) and we'll give you a quote. Happy with the offer? Come in to Amcorp Mall or arrange a meetup. Walk out with cash on the spot.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>How does consignment work?</summary>
+            <p>Drop off your cards with us. We'll list them at a price you agree on. When they sell, we deduct a small commission and pay you the rest. Great for high-value cards where you don't want to undersell.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>Do you buy graded / PSA slabs?</summary>
+            <p>Yes! We buy and sell PSA, BGS and CGC graded cards. WhatsApp us the cert number and grade and we'll get back with an offer.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>What sets or cards are you currently buying?</summary>
+            <p>We're always buying across all generations — Base Set, modern sets, Japanese exclusives, promos and more. If you're unsure, just ask — we'll be honest about whether we're interested.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>Can I trade cards instead of selling for cash?</summary>
+            <p>Absolutely. Bring your trade binder in-store and we'll work out a value-for-value deal. We trade fairly and don't low-ball on trade value.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>Do you have sealed products like booster boxes?</summary>
+            <p>Yes, we stock sealed product — booster boxes, elite trainer boxes, tins and more. Stock changes regularly so WhatsApp us to check availability.</p>
+          </details>
+          <details class="faq-item glass reveal">
+            <summary>Where exactly are you in Amcorp Mall?</summary>
+            <p>We're inside Amcorp Mall, Petaling Jaya. WhatsApp us before you visit and we'll share the exact unit location and any current parking tips.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24" fill="none">
+              <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 16h28" stroke="currentColor" stroke-width="2"/>
+              <circle cx="16" cy="16" r="4" fill="currentColor"/>
+              <circle cx="16" cy="16" r="2.5" fill="#0c0e1a" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </span>
+          <span class="brand-text">TCG<span class="brand-accent">MY</span></span>
+        </div>
+        <p class="muted small">Your trusted Pokémon TCG specialist in Petaling Jaya. Buy, sell, trade &amp; consign cards with confidence.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <strong>Visit</strong>
+          <p class="small muted">Amcorp Mall<br/>Jalan Persiaran Barat<br/>46050 Petaling Jaya, Selangor</p>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <p class="small muted">
+            <a href="https://wa.me/60XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp Us</a>
+          </p>
+        </div>
+        <div>
+          <strong>Hours</strong>
+          <p class="small muted">Mon–Fri · 11am–9pm<br/>Sat–Sun · 10am–9pm</p>
+        </div>
+      </div>
+    </div>
+    <div class="container foot-bottom">
+      <span class="small muted">© <span id="year"></span> TCG MY. All rights reserved.</span>
+      <span class="small muted">Pokémon and all related names are trademarks of Nintendo / Creatures Inc. / GAME FREAK inc.</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp button -->
+  <a class="fab" id="fabWhatsApp"
+     href="https://wa.me/60XXXXXXXXXX?text=Hi%20TCG%20MY!%20I%27d%20like%20to%20enquire%20about%20Pokemon%20cards."
+     target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.02 0C5.4 0 0 5.39 0 12.02c0 2.12.55 4.18 1.6 6L0 24l6.18-1.62a12.02 12.02 0 0 0 5.84 1.49h.01C18.66 23.87 24 18.49 24 11.85a11.78 11.78 0 0 0-3.48-8.37ZM12.02 21.8h-.01a9.74 9.74 0 0 1-4.97-1.36l-.36-.21-3.67.96.98-3.58-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.41 4.4-9.81 9.82-9.81 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.94c0 5.41-4.4 9.77-9.86 9.77Zm5.4-7.32c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.95 1.16-.18.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.08 4.48.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.18-1.4-.07-.12-.27-.2-.57-.35Z"/></svg>
+    <span class="fab-label">WhatsApp</span>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const burger = document.getElementById('navBurger');
+    const navLinks = document.querySelector('.nav-links');
+    if (burger && navLinks) {
+      burger.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        burger.setAttribute('aria-expanded', String(open));
+      });
+      navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }));
+    }
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const id = link.getAttribute('href');
+        if (id && id.length > 1) {
+          const el = document.querySelector(id);
+          if (el) {
+            e.preventDefault();
+            window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // Reveal on scroll
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+    }
+
+    // Hero card tilt
+    const heroCard = document.getElementById('heroCard');
+    if (heroCard && window.matchMedia('(pointer:fine)').matches) {
+      const wrap = heroCard.closest('.card-stack-wrap') || heroCard.parentElement;
+      wrap.addEventListener('mousemove', (e) => {
+        const r = wrap.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        heroCard.style.transform = `perspective(800px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateZ(0)`;
+      });
+      wrap.addEventListener('mouseleave', () => {
+        heroCard.style.transform = '';
+      });
+    }
+
+    // Live shop open/closed indicator (Malaysia time = UTC+8)
+    (function updateShopStatus() {
+      const el = document.getElementById('shopStatus');
+      if (!el) return;
+      const now = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur' }));
+      const day = now.getDay(); // 0=Sun, 1=Mon ... 6=Sat
+      const hour = now.getHours();
+      const isWeekend = day === 0 || day === 6;
+      const openHour = isWeekend ? 10 : 11;
+      const closeHour = 21;
+      const isOpen = hour >= openHour && hour < closeHour;
+      el.textContent = isOpen ? '🟢 Open now' : '🔴 Closed — opens ' + (isWeekend ? '10am' : '11am') + ' tomorrow';
+      el.className = 'badge-open ' + (isOpen ? 'open' : 'closed');
+    })();
+
+    // FAQ accordion keyboard support
+    document.querySelectorAll('.faq-item summary').forEach(s => {
+      s.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          s.parentElement.open = !s.parentElement.open;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
