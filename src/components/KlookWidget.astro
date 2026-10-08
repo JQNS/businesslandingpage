@@ -1,0 +1,19 @@
+---
+// Klook affiliate deals widget (iframe injected by Klook's script). Copy data-* values from the Klook widget builder.
+const { destId, tagId = '0', total = '6', title } = Astro.props;
+---
+<div class="klook-widget">
+  {title && <h4>{title}</h4>}
+  <ins class="klk-aff-widget" data-aid="138324" data-dest_id={destId} data-tag_id={tagId} data-currency="" data-lang=""
+    data-label1="" data-label2="" data-label3="" data-prod="deals_widget" data-total={total}>
+    <a href="//www.klook.com/" rel="sponsored nofollow noopener">Klook.com</a>
+  </ins>
+  <script is:inline>
+    (function (d, sc, u) {
+      if (d.querySelector('script[src="' + u + '"]')) return;
+      var s = d.createElement(sc), p = d.getElementsByTagName(sc)[0];
+      s.type = 'text/javascript'; s.async = true; s.src = u;
+      p.parentNode.insertBefore(s, p);
+    })(document, 'script', 'https://affiliate.klook.com/widget/fetch-iframe-init.js');
+  </script>
+</div>

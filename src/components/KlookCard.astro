@@ -1,0 +1,13 @@
+---
+// Klook activity / ticket card. `image` = Product Image URL from the Klook affiliate portal export.
+const { name, image, price, highlights = [], href, badge, icon = '🎟️', cta = 'Check availability on Klook' } = Astro.props;
+---
+<div class="aff-box klook">
+  {image ? <img src={image} alt={name} loading="lazy" width="320" height="200" /> : <span class="aff-icon" aria-hidden="true">{icon}</span>}
+  <div>
+    <h4>{name}</h4>
+    <p class="meta">{price && <>From <strong>{price}</strong></>}{price && badge && ' · '}{badge && <span class="badge">⚡ {badge}</span>}</p>
+    {highlights.length > 0 && <ul>{highlights.map((h) => <li>{h}</li>)}</ul>}
+    <a class="btn btn-klook" href={href} target="_blank" rel="sponsored nofollow noopener">{cta} →</a>
+  </div>
+</div>

@@ -101,7 +101,7 @@ const ogImage = image ? new URL(image.replace(/\.svg$/, '.jpg'), Astro.site).hre
       if (!a) return;
       var data = {
         affiliate_url: a.href,
-        affiliate_network: /shopee/.test(a.hostname) ? 'shopee' : a.hostname,
+        affiliate_network: /shopee/.test(a.hostname) ? 'shopee' : /klook/.test(a.hostname) ? 'klook' : a.hostname,
         affiliate_label: (a.closest('.aff-box')?.querySelector('h4')?.textContent || a.textContent).trim(),
       };
       // Sent straight to GA4 as an event; also visible to GTM as a dataLayer event.
