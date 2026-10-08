@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PostCard from '../../components/PostCard.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<Base title="All Travel Guides" description="Every Trust-Wise travel guide: events, destinations, hotels and packing lists.">
+  <section class="wrap page">
+    <h1>All guides</h1>
+    <div class="grid">{posts.map((post) => <PostCard post={post} />)}</div>
+  </section>
+</Base>

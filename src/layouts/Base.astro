@@ -1,0 +1,113 @@
+---
+import '../styles/global.css';
+import { SITE } from '../config';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  published?: Date;
+  modified?: Date;
+  noindex?: boolean;
+}
+const { title, description = SITE.description, image, type = 'website', jsonLd, published, modified, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
+const ogImage = image ? new URL(image.replace(/\.svg$/, '.jpg'), Astro.site).href : undefined;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  {SITE.gtmId && (
+    <>
+      <!-- Google Tag Manager -->
+      <script is:inline define:vars={{ gtmId: SITE.gtmId }}>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',gtmId);</script>
+      <!-- End Google Tag Manager -->
+    </>
+  )}
+  {SITE.ga4Id && (
+    <>
+      <!-- Google tag (gtag.js) -->
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.ga4Id}`}></script>
+      <script is:inline define:vars={{ ga4Id: SITE.ga4Id }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', ga4Id);
+      </script>
+    </>
+  )}
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1'} />
+  {SITE.googleVerification && <meta name="google-site-verification" content={SITE.googleVerification} />}
+  {SITE.bingVerification && <meta name="msvalidate.01" content={SITE.bingVerification} />}
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+  <link rel="alternate" type="application/rss+xml" title={SITE.name} href="/rss.xml" />
+  <meta property="og:site_name" content={SITE.name} />
+  <meta property="og:locale" content={SITE.locale} />
+  <meta property="og:type" content={type} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
+  {ogImage && <meta property="og:image:width" content="1200" />}
+  {ogImage && <meta property="og:image:height" content="675" />}
+  {published && <meta property="article:published_time" content={published.toISOString()} />}
+  {modified && <meta property="article:modified_time" content={modified.toISOString()} />}
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  {ogImage && <meta name="twitter:image" content={ogImage} />}
+  <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+  {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+</head>
+<body>
+  {SITE.gtmId && (
+    <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}`} height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  )}
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="/" class="logo">Trust<span>-Wise</span></a>
+      <nav>
+        <a href="/blog/">Guides</a>
+        <a href="/about/">About</a>
+      </nav>
+    </div>
+  </header>
+  <main><slot /></main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Some links on this site are affiliate links. If you book or buy through them, we may earn a small commission at no extra cost to you. <a href="/disclosure/">Learn more</a>.</p>
+      <p>
+        <a href="/about/">About</a> · <a href="/disclosure/">Affiliate Disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/rss.xml">RSS</a>
+      </p>
+      <p>© {new Date().getFullYear()} {SITE.name}</p>
+    </div>
+  </footer>
+  <script is:inline>
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[rel~="sponsored"]');
+      if (!a) return;
+      var data = {
+        affiliate_url: a.href,
+        affiliate_network: /shopee/.test(a.hostname) ? 'shopee' : a.hostname,
+        affiliate_label: (a.closest('.aff-box')?.querySelector('h4')?.textContent || a.textContent).trim(),
+      };
+      // Sent straight to GA4 as an event; also visible to GTM as a dataLayer event.
+      if (window.gtag) window.gtag('event', 'affiliate_click', data);
+      else (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: 'affiliate_click' }, data));
+    });
+  </script>
+</body>
+</html>

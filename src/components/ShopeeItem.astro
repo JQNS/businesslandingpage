@@ -1,0 +1,14 @@
+---
+// Shopee affiliate product. Paste your s.shopee.com.my affiliate link as href.
+// Use `image` for a product photo, or `icon` (emoji) for a quick visual tile.
+const { name, why, price, href, image, icon = '🛍️' } = Astro.props;
+---
+<div class="aff-box shopee">
+  {image ? <img src={image} alt={name} loading="lazy" /> : <span class="aff-icon" aria-hidden="true">{icon}</span>}
+  <div>
+    <h4>{name}</h4>
+    {why && <p>{why}</p>}
+    {price && <p class="meta">Around {price}</p>}
+    <a class="btn btn-shopee" href={href} target="_blank" rel="sponsored nofollow noopener">View on Shopee →</a>
+  </div>
+</div>

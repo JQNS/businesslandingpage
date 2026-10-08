@@ -1,0 +1,78 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Disclosure from '../../components/Disclosure.astro';
+import PostCard from '../../components/PostCard.astro';
+import { SITE } from '../../config';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post, posts } }));
+}
+const { post, posts } = Astro.props;
+const { Content, headings } = await render(post);
+const d = post.data;
+const fmt = (x: Date) => x.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+const toc = [...headings.filter((h) => h.depth === 2), ...(d.faq.length ? [{ slug: 'faq', text: 'FAQ' }] : [])];
+const related = posts
+  .filter((p) => p.id !== post.id && (p.data.category === d.category || p.data.tags.some((t) => d.tags.includes(t))))
+  .slice(0, 3);
+const url = new URL(`/blog/${post.id}/`, Astro.site).href;
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: d.title,
+  description: d.description,
+  datePublished: d.pubDate.toISOString(),
+  dateModified: (d.updatedDate ?? d.pubDate).toISOString(),
+  author: { '@type': 'Organization', name: SITE.author },
+  publisher: { '@type': 'Organization', name: SITE.name },
+  mainEntityOfPage: url,
+  ...(d.heroImage && { image: new URL(d.heroImage.replace(/\.svg$/, '.jpg'), Astro.site).href }),
+};
+const breadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: SITE.url + '/blog/' },
+    { '@type': 'ListItem', position: 3, name: d.title, item: url },
+  ],
+};
+const faqLd = d.faq.length > 0 && {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: d.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+const jsonLd = [article, breadcrumbs, ...(faqLd ? [faqLd] : [])];
+---
+<Base title={d.title} description={d.description} image={d.heroImage} type="article" jsonLd={jsonLd} published={d.pubDate} modified={d.updatedDate ?? d.pubDate}>
+  <article class="wrap post">
+    <nav class="crumbs"><a href="/">Home</a> › <a href="/blog/">Guides</a> › {d.category}</nav>
+    <h1>{d.title}</h1>
+    <p class="meta">
+      {d.updatedDate ? <>Updated {fmt(d.updatedDate)}</> : <>Published {fmt(d.pubDate)}</>} · {SITE.author}
+    </p>
+    {d.heroImage && <img class="hero-img" src={d.heroImage} alt={d.heroAlt ?? d.title} width="1600" height="900" fetchpriority="high" />}
+    <Disclosure />
+    {toc.length > 2 && (
+      <details class="toc" open>
+        <summary>In this guide</summary>
+        <ol>{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+      </details>
+    )}
+    <div class="prose"><Content /></div>
+    {d.faq.length > 0 && (
+      <section class="faq">
+        <h2 id="faq">Frequently asked questions</h2>
+        {d.faq.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+      </section>
+    )}
+  </article>
+  {related.length > 0 && (
+    <section class="wrap">
+      <h2>Related guides</h2>
+      <div class="grid">{related.map((p) => <PostCard post={p} />)}</div>
+    </section>
+  )}
+</Base>

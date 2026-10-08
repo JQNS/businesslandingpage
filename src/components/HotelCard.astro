@@ -1,0 +1,13 @@
+---
+// Hotel recommendation box. Point `href` at Agoda / Booking / Trip.com affiliate link.
+const { name, area, price, rating, pros = [], href, image, cta = 'Check availability' } = Astro.props;
+---
+<div class="aff-box">
+  {image && <img src={image} alt={name} loading="lazy" />}
+  <div>
+    <h4>{name}</h4>
+    <p class="meta">{area}{price && ` · from ${price}`}{rating && ` · ★ ${rating}`}</p>
+    {pros.length > 0 && <ul>{pros.map((p) => <li>{p}</li>)}</ul>}
+    <a class="btn btn-primary" href={href} target="_blank" rel="sponsored nofollow noopener">{cta} →</a>
+  </div>
+</div>

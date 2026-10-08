@@ -1,0 +1,7 @@
+---
+const { type = 'tip', title } = Astro.props; // tip | warn | info
+---
+<aside class={`callout ${type}`}>
+  {title && <strong>{title}</strong>}
+  <slot />
+</aside>

@@ -1,0 +1,12 @@
+---
+const { post } = Astro.props;
+const d = post.data;
+---
+<a class="card" href={`/blog/${post.id}/`}>
+  {d.heroImage && <img src={d.heroImage} alt={d.heroAlt ?? ''} loading="lazy" />}
+  <div class="card-body">
+    <span class="tag">{d.category}</span>
+    <h3>{d.title}</h3>
+    <p>{d.description}</p>
+  </div>
+</a>

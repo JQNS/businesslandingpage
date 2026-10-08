@@ -1,0 +1,9 @@
+---
+// Icon fact grid. items: [{ icon: '📅', label: 'Dates', value: '11–13 Dec 2026' }]
+const { items = [] } = Astro.props;
+---
+<div class="facts">
+  {items.map((f) => (
+    <div class="fact"><span class="fact-icon" aria-hidden="true">{f.icon}</span><span class="fact-label">{f.label}</span><strong>{f.value}</strong></div>
+  ))}
+</div>

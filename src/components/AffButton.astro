@@ -1,0 +1,5 @@
+---
+// Any affiliate link as a button. rel="sponsored" is required by Google for paid links.
+const { href, label = 'Check prices', variant = 'primary' } = Astro.props;
+---
+<a class={`btn btn-${variant}`} href={href} target="_blank" rel="sponsored nofollow noopener">{label} →</a>
