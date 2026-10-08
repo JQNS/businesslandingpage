@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://trust-wise.com/sitemap-index.xml
+Sitemap: https://trust-wise.org/sitemap-index.xml

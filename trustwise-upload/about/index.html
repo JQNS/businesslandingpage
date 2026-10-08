@@ -1,0 +1,26 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><script>(function(){const gtmId = "GTM-5MKMXL2F";
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',gtmId);})();</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-CN9J308Y75"></script><script>(function(){const ga4Id = "G-CN9J308Y75";
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', ga4Id);
+      })();</script><meta name="viewport" content="width=device-width, initial-scale=1"><title>About | Trust-Wise</title><meta name="description" content="Who we are and how Trust-Wise writes its travel guides."><link rel="canonical" href="https://trust-wise.com/about/"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="sitemap" href="/sitemap-index.xml"><link rel="alternate" type="application/rss+xml" title="Trust-Wise" href="/rss.xml"><meta property="og:site_name" content="Trust-Wise"><meta property="og:locale" content="en_MY"><meta property="og:type" content="website"><meta property="og:title" content="About | Trust-Wise"><meta property="og:description" content="Who we are and how Trust-Wise writes its travel guides."><meta property="og:url" content="https://trust-wise.com/about/"><meta name="twitter:title" content="About | Trust-Wise"><meta name="twitter:description" content="Who we are and how Trust-Wise writes its travel guides."><meta name="twitter:card" content="summary"><link rel="stylesheet" href="/_astro/about.Ux1RdDit.css"></head> <body> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MKMXL2F" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <header class="site-header"> <div class="wrap nav"> <a href="/" class="logo">Trust<span>-Wise</span></a> <nav> <a href="/blog/">Guides</a> <a href="/about/">About</a> </nav> </div> </header> <main> <section class="wrap page prose"> <h1>About Trust-Wise</h1> <p>Trust-Wise publishes practical travel guides for Malaysian travellers. We focus on the things that actually matter: how to get there, where to stay, what it costs, and what to bring.</p> <p>We only recommend hotels, tours and products we would use ourselves. Some links earn us a commission — see our <a href="/disclosure/">affiliate disclosure</a>.</p> </section> </main> <footer class="site-footer"> <div class="wrap"> <p>Some links on this site are affiliate links. If you book or buy through them, we may earn a small commission at no extra cost to you. <a href="/disclosure/">Learn more</a>.</p> <p> <a href="/about/">About</a> · <a href="/disclosure/">Affiliate Disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/rss.xml">RSS</a> </p> <p>© 2026 Trust-Wise</p> </div> </footer> <script>
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[rel~="sponsored"]');
+      if (!a) return;
+      var data = {
+        affiliate_url: a.href,
+        affiliate_network: /shopee/.test(a.hostname) ? 'shopee' : /klook/.test(a.hostname) ? 'klook' : a.hostname,
+        affiliate_label: (a.closest('.aff-box')?.querySelector('h4')?.textContent || a.textContent).trim(),
+      };
+      // Sent straight to GA4 as an event; also visible to GTM as a dataLayer event.
+      if (window.gtag) window.gtag('event', 'affiliate_click', data);
+      else (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: 'affiliate_click' }, data));
+    });
+  </script> </body> </html>

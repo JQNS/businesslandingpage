@@ -1,7 +1,7 @@
 // Change these once, used site-wide (SEO, footer, RSS).
 export const SITE = {
   name: 'Trust-Wise',
-  url: 'https://trust-wise.com', // TODO: set your real domain (also in public/robots.txt)
+  url: 'https://trust-wise.org',
   description: 'Honest travel guides for Malaysians: where to stay, how to get there, and what to pack.',
   author: 'Trust-Wise Team',
   locale: 'en_MY',
