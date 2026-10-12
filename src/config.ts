@@ -17,6 +17,10 @@ export const SITE = {
   tripHotels: {
     'Kuala Lumpur': 'https://www.trip.com/t/OXn6G1BgiW2',
     Bangkok: 'https://www.trip.com/t/OSVUciDgiW2',
+    Pattaya: 'https://www.trip.com/t/efGrIYJgiW2',
+    'Chiang Mai': 'https://www.trip.com/t/PmJMjZKgiW2',
+    Phuket: 'https://www.trip.com/t/Q6gGG9MgiW2',
+    Hatyai: 'https://www.trip.com/t/nT2aMFNgiW2',
   } as Record<string, string>,
   ga4Id: 'G-CN9J308Y75', // GA4 via gtag.js; don't also add a GA4 tag in GTM or pageviews count twice
 
