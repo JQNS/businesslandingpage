@@ -3,17 +3,100 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../config';
+import { updates, events, essentials, destinations } from '../data/home';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const today = new Date().toISOString().slice(0, 10);
+const upcoming = events.filter((e) => e.end >= today).slice(0, 4);
+
+const fmt = (iso: string, opts: Intl.DateTimeFormatOptions) =>
+  new Date(iso + 'T00:00:00Z').toLocaleDateString('en-GB', { timeZone: 'UTC', ...opts });
+const range = (s: string, e: string) => {
+  if (s === e) return fmt(s, { day: 'numeric', month: 'short' });
+  const sameMonth = s.slice(0, 7) === e.slice(0, 7);
+  return sameMonth
+    ? `${fmt(s, { day: 'numeric' })}–${fmt(e, { day: 'numeric', month: 'short' })}`
+    : `${fmt(s, { day: 'numeric', month: 'short' })} – ${fmt(e, { day: 'numeric', month: 'short' })}`;
+};
 ---
 <Base title={SITE.name} jsonLd={{ '@context': 'https://schema.org', '@type': 'WebSite', name: SITE.name, url: SITE.url }}>
-  <section class="hero wrap">
-    <h1>Travel guides you can actually trust.</h1>
-    <p>Practical, no-fluff guides for Malaysians heading to Thailand and beyond — where to stay, how to get there, and what to pack.</p>
+  <section class="home-hero">
+    <img src="/images/photos/home-bangkok-twilight.jpg" alt="Bangkok skyline at dusk" width="1600" height="900" fetchpriority="high" />
+    <div class="wrap home-hero-text">
+      <p class="eyebrow">For Malaysian and Singaporean travellers</p>
+      <h1>Thailand trips, planned properly.</h1>
+      <p>Guides written from a Malaysian point of view: routes from KL, Penang and JB, prices in ringgit, and the rules that changed this year.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#essentials">Start with the essentials</a>
+        <a class="btn btn-ghost" href="/blog/">Browse all guides</a>
+      </div>
+    </div>
   </section>
+
+  <section class="wrap home-split">
+    <div>
+      <h2 class="section-title">Travel updates</h2>
+      <ul class="updates">
+        {updates.map((u) => (
+          <li>
+            <span class="update-meta"><time datetime={u.date}>{fmt(u.date, { day: 'numeric', month: 'short', year: 'numeric' })}</time> · {u.label}</span>
+            <a href={u.href}>{u.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    {upcoming.length > 0 && (
+      <div>
+        <h2 class="section-title">Coming up</h2>
+        <ul class="events">
+          {upcoming.map((e) => (
+            <li>
+              <a href={e.href}>
+                <span class="event-date">{range(e.start, e.end)}</span>
+                <span class="event-name">{e.name}</span>
+                <span class="event-place">{e.place}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </section>
+
+  <section class="wrap" id="essentials">
+    <h2 class="section-title">Before you fly to Thailand</h2>
+    <ol class="essentials">
+      {essentials.map((e) => (
+        <li><a href={e.href}><strong>{e.title}</strong><span>{e.text}</span></a></li>
+      ))}
+    </ol>
+  </section>
+
   <section class="wrap">
-    <h2>Latest guides</h2>
-    <div class="grid">{posts.map((post) => <PostCard post={post} />)}</div>
+    <h2 class="section-title">Where to next</h2>
+    <div class="destinations">
+      {destinations.map((d) => (
+        <a class="destination" href={d.href}>
+          <img src={d.image} alt="" loading="lazy" width="1200" height="675" />
+          <span class="destination-text"><strong>{d.name}</strong>{d.note}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Latest guides</h2>
+      <a href="/blog/">All guides →</a>
+    </div>
+    <div class="grid">{posts.slice(0, 6).map((post) => <PostCard post={post} />)}</div>
+  </section>
+
+  <section class="wrap promise">
+    <div><strong>Written for Malaysians</strong><p>Every guide starts from KL, Penang or JB, with prices in ringgit and Malaysian passport rules.</p></div>
+    <div><strong>Checked against official sources</strong><p>Visa, entry and event details link to the government or organiser source, and we update guides when rules change.</p></div>
+    <div><strong>Clear about how we earn</strong><p>Some links pay us a commission. It never decides what we recommend. <a href="/disclosure/">How it works</a></p></div>
   </section>
 </Base>

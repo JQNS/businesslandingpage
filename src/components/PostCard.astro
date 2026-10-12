@@ -5,7 +5,7 @@ const d = post.data;
 <a class="card" href={`/blog/${post.id}/`}>
   {d.heroImage && <img src={d.heroImage} alt={d.heroAlt ?? ''} loading="lazy" />}
   <div class="card-body">
-    <span class="tag">{d.category}</span>
+    <span class="tag">{d.category}</span><time class="card-date" datetime={(d.updatedDate ?? d.pubDate).toISOString()}>{(d.updatedDate ?? d.pubDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</time>
     <h3>{d.title}</h3>
     <p>{d.description}</p>
   </div>
