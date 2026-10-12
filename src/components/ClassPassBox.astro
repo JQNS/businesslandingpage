@@ -1,7 +1,7 @@
 ---
 // ClassPass call-to-action. The link comes from SITE.classpassUrl so it can be swapped in one place.
 import { SITE } from '../config';
-const { title = 'Try different gyms and studios with ClassPass', text = 'One membership, credits you spend on classes across KL: HYROX-style conditioning, strength, spin, Pilates and more. Good for testing a gym before you commit to a membership.', cta = 'See classes on ClassPass' } = Astro.props;
+const { title = 'Try different gyms and studios with ClassPass', text = 'One membership, credits you spend on classes across KL: HYROX-style conditioning, strength, spin, Pilates and more. New members get free workouts when they sign up through our link (the offer is shown on the sign-up page).', cta = 'Get free ClassPass workouts' } = Astro.props;
 const rel = SITE.classpassAffiliate ? 'sponsored nofollow noopener' : 'nofollow noopener';
 ---
 <div class="aff-box classpass">
