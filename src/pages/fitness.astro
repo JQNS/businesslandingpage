@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import ClassPassBox from '../components/ClassPassBox.astro';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft && data.category === 'Fitness'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<Base title="Fitness in KL: HYROX, Gyms & Training Guides" description="Where to train in Kuala Lumpur: HYROX training clubs, gyms and classes, plus race guides for Malaysian fitness events.">
+  <section class="page-hero">
+    <img src="/images/photos/hyrox-sled-push.jpg" alt="Athletes pushing weighted sleds at an indoor fitness race" width="1200" height="675" />
+    <div class="wrap page-hero-text">
+      <p class="eyebrow">Fitness</p>
+      <h1>Train in KL, race anywhere.</h1>
+      <p>Where to train for HYROX and other fitness races in Kuala Lumpur, which classes are worth trying, and how to plan race weekends at home and abroad.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">Fitness guides</h2>
+    <div class="grid">{posts.map((post) => <PostCard post={post} />)}</div>
+  </section>
+
+  <section class="wrap" style="max-width: 760px">
+    <ClassPassBox />
+  </section>
+</Base>

@@ -9,6 +9,11 @@ export const SITE = {
   googleVerification: '',
   bingVerification: '',
   gtmId: 'GTM-5MKMXL2F', // Google Tag Manager container; set '' to disable
+  // ClassPass: plain link until the ClassPass affiliate application (via Impact) is approved.
+  // Then paste the affiliate link here and set classpassAffiliate: true (adds rel="sponsored").
+  // Don't use a personal refer-a-friend link: ClassPass's referral terms ban SEO / public advertising use.
+  classpassUrl: 'https://classpass.com/',
+  classpassAffiliate: false,
   ga4Id: 'G-CN9J308Y75', // GA4 via gtag.js; don't also add a GA4 tag in GTM or pageviews count twice
 
 };

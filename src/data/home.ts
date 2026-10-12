@@ -4,6 +4,12 @@
 export const updates = [
   {
     date: '2026-10-12',
+    label: 'Fitness',
+    title: 'Racing HYROX Kuala Lumpur in December? Where to train in KL: official clubs, gyms and an 8-week plan.',
+    href: '/blog/hyrox-training-kuala-lumpur/',
+  },
+  {
+    date: '2026-10-12',
     label: 'School holidays',
     title: 'Year-end school holidays run 4–31 Dec (Group A) and 5–31 Dec (Group B). Schools reopen 4 January 2027.',
     href: '/blog/december-school-holidays-thailand-family-trips/',
