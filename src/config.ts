@@ -13,6 +13,11 @@ export const SITE = {
   // Note: ClassPass's referral terms restrict SEO/public advertising use; an Impact affiliate link is the approved route.
   classpassUrl: 'https://classpass.com/refer/IL79JGRQ26?placement=Profile',
   classpassAffiliate: true, // adds rel="sponsored" and GA4 affiliate_click tracking
+  // Trip.com hotel affiliate links (city hotel search), used by TripHotelBox.
+  tripHotels: {
+    'Kuala Lumpur': 'https://www.trip.com/t/OXn6G1BgiW2',
+    Bangkok: 'https://www.trip.com/t/OSVUciDgiW2',
+  } as Record<string, string>,
   ga4Id: 'G-CN9J308Y75', // GA4 via gtag.js; don't also add a GA4 tag in GTM or pageviews count twice
 
 };
