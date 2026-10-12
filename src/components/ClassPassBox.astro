@@ -7,7 +7,7 @@ const rel = SITE.classpassAffiliate ? 'sponsored nofollow noopener' : 'nofollow 
 <div class="aff-box classpass">
   <span class="aff-icon" aria-hidden="true">🏋️</span>
   <div>
-    <h4>{title}</h4>
+    <h4><a href={SITE.classpassUrl} target="_blank" rel={rel} style="color: inherit; text-decoration: none">{title}</a></h4>
     <p>{text}</p>
     <a class="btn btn-primary" href={SITE.classpassUrl} target="_blank" rel={rel}>{cta} →</a>
   </div>
