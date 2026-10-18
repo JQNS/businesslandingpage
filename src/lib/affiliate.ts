@@ -7,7 +7,7 @@ export const AFFILIATE = {
   // Trip.com deep links need both IDs from the Trip.com affiliate portal (Allianceid + SID).
   // Until tripSid is set, plain trip.com links are left as they are; city links in SITE.tripHotels still work.
   tripAllianceId: '10951620',
-  tripSid: '',
+  tripSid: '333075856',
   // Agoda Partners site ID ("cid"). Set it once approved and every agoda.com link is tracked.
   agodaCid: '',
 };
