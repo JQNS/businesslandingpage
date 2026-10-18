@@ -1,13 +1,17 @@
 ---
-// Hotel recommendation box. Point `href` at Agoda / Booking / Trip.com affiliate link.
-const { name, area, price, rating, pros = [], href, image, cta = 'Check availability' } = Astro.props;
+// Hotel recommendation box. Paste the hotel's normal agoda.com (or trip.com) page as `href`:
+// the affiliate ID is added automatically.
+import { aff } from '../lib/affiliate';
+const { name, area, price, rating, pros = [], href, image, icon = '🏨', cta } = Astro.props;
+const link = aff(href);
+const isAgoda = /agoda\.com/.test(link);
 ---
-<div class="aff-box">
-  {image && <img src={image} alt={name} loading="lazy" />}
+<div class={`aff-box ${isAgoda ? 'agoda' : ''}`}>
+  {image ? <img src={image} alt={name} loading="lazy" /> : <span class="aff-icon" aria-hidden="true">{icon}</span>}
   <div>
     <h4>{name}</h4>
     <p class="meta">{area}{price && ` · from ${price}`}{rating && ` · ★ ${rating}`}</p>
     {pros.length > 0 && <ul>{pros.map((p) => <li>{p}</li>)}</ul>}
-    <a class="btn btn-primary" href={href} target="_blank" rel="sponsored nofollow noopener">{cta} →</a>
+    <a class={`btn ${isAgoda ? 'btn-agoda' : 'btn-primary'}`} href={link} target="_blank" rel="sponsored nofollow noopener">{cta ?? (isAgoda ? 'Check prices on Agoda' : 'Check availability')} →</a>
   </div>
 </div>
