@@ -1,7 +1,11 @@
 ---
-// Shopee affiliate product. Paste your s.shopee.com.my affiliate link as href.
+// Shopee affiliate product. Use a saved product from src/data/shopee.ts: <ShopeeItem product="power-bank" />,
+// or paste your own s.shopee.com.my affiliate link as href. Any prop you pass overrides the saved one.
 // Use `image` for a product photo, or `icon` (emoji) for a quick visual tile.
-const { name, why, price, href, image, icon = '🛍️' } = Astro.props;
+import { SHOPEE } from '../data/shopee';
+const saved = Astro.props.product ? SHOPEE[Astro.props.product] : undefined;
+if (Astro.props.product && !saved) throw new Error(`Unknown Shopee product "${Astro.props.product}". Add it to src/data/shopee.ts.`);
+const { name, why, price, href, image, icon = '🛍️' } = { ...saved, ...Astro.props };
 ---
 <div class="aff-box shopee">
   {image ? <img src={image} alt={name} loading="lazy" /> : <span class="aff-icon" aria-hidden="true">{icon}</span>}

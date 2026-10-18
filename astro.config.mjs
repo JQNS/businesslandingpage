@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import fs from 'node:fs';
 import { SITE } from './src/config.ts';
+import rehypeAffiliate from './src/lib/rehype-affiliate.mjs';
 
 // slug -> last modified date, read from post frontmatter, so the sitemap tells Google when a guide changed.
 const dir = './src/content/blog';
@@ -19,7 +20,7 @@ export default defineConfig({
   trailingSlash: 'always',
   build: { format: 'directory' },
   integrations: [
-    mdx(),
+    mdx({ rehypePlugins: [rehypeAffiliate] }),
     sitemap({
       filter: (page) => !page.includes('/404'),
       serialize(item) {
