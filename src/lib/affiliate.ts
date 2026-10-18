@@ -8,8 +8,8 @@ export const AFFILIATE = {
   // Until tripSid is set, plain trip.com links are left as they are; city links in SITE.tripHotels still work.
   tripAllianceId: '10951620',
   tripSid: '333075856',
-  // Agoda Partners site ID ("cid"). Set it once approved and every agoda.com link is tracked.
-  agodaCid: '',
+  // Agoda Partners site ID ("cid"): every agoda.com link in a post gets it.
+  agodaCid: '1977012',
 };
 
 const host = (url: URL) => url.hostname.replace(/^www\./, '');

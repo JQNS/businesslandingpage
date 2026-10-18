@@ -1,0 +1,23 @@
+---
+// Hotel search box for a city: Agoda as the main button, Trip.com as "compare".
+// Links live in src/config.ts (SITE.agodaHotels, SITE.tripHotels) so each city is updated in one place.
+// Agoda converts best with Malaysians; Trip.com's longer cookie catches people who book days later.
+import { SITE } from '../config';
+const { city, title = `Find a ${city} hotel`, text = 'See live prices, reviews and free-cancellation options, then filter by area.', cta = `See ${city} hotels on Agoda` } = Astro.props;
+const agoda = SITE.agodaHotels[city];
+const trip = SITE.tripHotels[city];
+const main = agoda ?? trip;
+const rel = 'sponsored nofollow noopener';
+---
+{main && (
+  <div class={`aff-box ${agoda ? 'agoda' : 'trip'}`}>
+    <span class="aff-icon" aria-hidden="true">🏨</span>
+    <div>
+      <h4><a href={main} target="_blank" rel={rel} style="color: inherit; text-decoration: none">{title}</a></h4>
+      <p>{text}</p>
+      {agoda && <a class="btn btn-agoda" href={agoda} target="_blank" rel={rel}>{cta} →</a>}
+      {agoda && trip && <a class="btn btn-trip-outline" href={trip} target="_blank" rel={rel}>Compare on Trip.com</a>}
+      {!agoda && <a class="btn btn-trip" href={trip} target="_blank" rel={rel}>See {city} hotel prices →</a>}
+    </div>
+  </div>
+)}

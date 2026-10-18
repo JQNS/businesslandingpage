@@ -162,3 +162,9 @@ h1, h2, h3, h4 { line-height: 1.25; }
 .aff-box.trip .aff-icon { background: linear-gradient(135deg, #eff6ff, #dbeafe); }
 .btn-trip { background: #287dfa; color: #fff; }
 .btn-trip:hover { background: #1f6ad8; }
+.btn-trip-outline { border: 2px solid #287dfa; color: #287dfa; margin-left: 8px; }
+.aff-box.agoda { border-left: 4px solid #5542f6; }
+.aff-box.agoda .aff-icon { background: linear-gradient(135deg, #f1efff, #e0dcff); }
+.btn-agoda { background: #5542f6; color: #fff; }
+.btn-agoda:hover { background: #4433d8; }
+@media (max-width: 520px) { .btn-trip-outline { margin-left: 0; } }

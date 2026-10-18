@@ -22,6 +22,20 @@ export const SITE = {
     Phuket: 'https://www.trip.com/t/Q6gGG9MgiW2',
     Hatyai: 'https://www.trip.com/t/nT2aMFNgiW2',
   } as Record<string, string>,
+  // Agoda city hotel search links (partner ID 1977012). Main hotel button in HotelBox.
+  // City IDs come from agoda.com/city/<name>.html. Agoda's cookie is short (~1 day), so Trip.com stays as the 2nd button.
+  agodaHotels: Object.fromEntries(
+    Object.entries({
+      Bangkok: 9395,
+      Pattaya: 8584,
+      'Chiang Mai': 7401,
+      Hatyai: 9312,
+      'Kuala Lumpur': 14524,
+      Phuket: 16056,
+      Krabi: 14865,
+      Singapore: 4064,
+    }).map(([city, id]) => [city, `https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1977012&hl=en-us&city=${id}`]),
+  ) as Record<string, string>,
   ga4Id: 'G-CN9J308Y75', // GA4 via gtag.js; don't also add a GA4 tag in GTM or pageviews count twice
 
 };
