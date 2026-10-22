@@ -34,6 +34,9 @@ export const SITE = {
       Phuket: 16056,
       Krabi: 14865,
       Singapore: 4064,
+      Penang: 16087,
+      Langkawi: 16928,
+      Melaka: 15121,
     }).map(([city, id]) => [city, `https://www.agoda.com/partners/partnersearch.aspx?pcs=1&cid=1977012&hl=en-us&city=${id}`]),
   ) as Record<string, string>,
   ga4Id: 'G-CN9J308Y75', // GA4 via gtag.js; don't also add a GA4 tag in GTM or pageviews count twice

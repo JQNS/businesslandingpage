@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import PostCard from '../components/PostCard.astro';
+import Facts from '../components/Facts.astro';
+import { malaysiaFacts } from '../data/home';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft && data.category === 'Malaysia'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<Base title="Visit Malaysia: First-Timer Guides, Food & Cuti-Cuti Malaysia" description="Malaysia guides written by Malaysians: culture and etiquette, the MDAC arrival card, what to eat, things to do in KL and where to go beyond it.">
+  <section class="page-hero">
+    <img src="/images/photos/kl-petronas-skyline.jpg" alt="Petronas Twin Towers and the Kuala Lumpur skyline at dusk" width="1200" height="675" />
+    <div class="wrap page-hero-text">
+      <p class="eyebrow">Malaysia</p>
+      <h1>Selamat datang ke Malaysia.</h1>
+      <p>Our country, explained by locals: the people and cultures, how to be a good guest, what to eat, and where to go beyond Kuala Lumpur.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">Malaysia at a glance</h2>
+    <Facts items={malaysiaFacts} />
+  </section>
+
+  <section class="wrap">
+    <h2 class="section-title">Malaysia guides</h2>
+    <div class="grid">{posts.map((post) => <PostCard post={post} />)}</div>
+  </section>
+</Base>

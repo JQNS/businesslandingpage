@@ -3,6 +3,12 @@
 // Travel updates: newest first. Only facts we've checked and written up in a guide.
 export const updates = [
   {
+    date: '2026-10-22',
+    label: 'Malaysia',
+    title: 'Visiting Malaysia for HYROX or Visit Malaysia 2026? Most foreign visitors must file the free MDAC arrival card within 3 days before landing.',
+    href: '/blog/first-time-in-malaysia/',
+  },
+  {
     date: '2026-10-12',
     label: 'Fitness',
     title: 'Racing HYROX Kuala Lumpur in December? Where to train in KL: official clubs, gyms and an 8-week plan.',
@@ -30,6 +36,7 @@ export const updates = [
 
 // Upcoming events. Past events (by `end`) drop off automatically on the next build.
 export const events = [
+  { start: '2026-11-08', end: '2026-11-08', name: 'Deepavali', place: 'Malaysia', href: '/blog/first-time-in-malaysia/' },
   { start: '2026-11-24', end: '2026-11-25', name: 'Yi Peng & Loy Krathong', place: 'Chiang Mai', href: '/blog/loy-krathong-yi-peng-2026-chiang-mai/' },
   { start: '2026-12-05', end: '2026-12-31', name: 'School holidays', place: 'Malaysia', href: '/blog/december-school-holidays-thailand-family-trips/' },
   { start: '2026-12-10', end: '2026-12-13', name: 'HYROX Kuala Lumpur', place: 'MITEC, KL', href: '/blog/hyrox-kuala-lumpur-2026-guide/' },
@@ -50,4 +57,22 @@ export const destinations = [
   { name: 'Pattaya', note: '2 hours from Bangkok', image: '/images/photos/pattaya-bay.jpg', href: '/blog/things-to-do-in-pattaya/' },
   { name: 'Chiang Mai', note: 'Lanterns and cool weather', image: '/images/photos/chiang-mai-lanterns.jpg', href: '/blog/loy-krathong-yi-peng-2026-chiang-mai/' },
   { name: 'Hatyai', note: 'The easy trip from the north', image: '/images/photos/hatyai-street.jpg', href: '/blog/kl-to-hatyai/' },
+];
+
+// "Visiting Malaysia?" block on the homepage, for first-time visitors (e.g. HYROX racers from overseas).
+// Every fact here is checked and also appears, with its source, in /blog/first-time-in-malaysia/.
+export const malaysiaFacts = [
+  { icon: '👥', label: 'People', value: 'Malay, Chinese, Indian and indigenous peoples' },
+  { icon: '🗣️', label: 'Language', value: 'Malay is official, English is everywhere' },
+  { icon: '📝', label: 'Arrival card', value: 'Free MDAC, filed within 3 days before you land' },
+  { icon: '💵', label: 'Money', value: 'Ringgit (RM). Tipping not expected' },
+  { icon: '🔌', label: 'Plugs', value: 'Type G three-pin, 240V' },
+  { icon: '🏙️', label: 'Fun fact', value: 'Petronas: tallest twin towers on Earth, 452 m' },
+];
+
+export const malaysiaGuides = [
+  { name: 'First time in Malaysia', note: 'Culture, etiquette and the practical stuff', image: '/images/photos/kl-petronas-skyline.jpg', href: '/blog/first-time-in-malaysia/' },
+  { name: 'Malaysian food', note: '25 dishes to try, and how to eat halal', image: '/images/photos/nasi-lemak.jpg', href: '/blog/malaysian-food-guide/' },
+  { name: 'Kuala Lumpur', note: '15 highlights and a 3-day plan', image: '/images/photos/kl-skyline-night.jpg', href: '/blog/things-to-do-in-kuala-lumpur/' },
+  { name: 'Cuti-cuti Malaysia', note: 'Penang, Melaka, Langkawi, Borneo', image: '/images/photos/melaka-jonker-street.jpg', href: '/blog/cuti-cuti-malaysia-destinations/' },
 ];

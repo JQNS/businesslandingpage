@@ -3,7 +3,8 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../config';
-import { updates, events, essentials, destinations } from '../data/home';
+import { updates, events, essentials, destinations, malaysiaFacts, malaysiaGuides } from '../data/home';
+import Facts from '../components/Facts.astro';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
@@ -63,6 +64,23 @@ const range = (s: string, e: string) => {
         </ul>
       </div>
     )}
+  </section>
+
+  <section class="wrap malaysia-intro" id="malaysia">
+    <div class="section-head">
+      <h2 class="section-title">Visiting Malaysia? Selamat datang!</h2>
+      <a href="/malaysia/">All Malaysia guides →</a>
+    </div>
+    <p class="lede">Flying in for HYROX, Visit Malaysia 2026 or your first trip to Asia? Here's what Malaysians tell their own friends before they come.</p>
+    <Facts items={malaysiaFacts} />
+    <div class="destinations">
+      {malaysiaGuides.map((d) => (
+        <a class="destination" href={d.href}>
+          <img src={d.image} alt="" loading="lazy" width="1200" height="675" />
+          <span class="destination-text"><strong>{d.name}</strong>{d.note}</span>
+        </a>
+      ))}
+    </div>
   </section>
 
   <section class="wrap" id="essentials">
