@@ -3,6 +3,18 @@
 // Travel updates: newest first. Only facts we've checked and written up in a guide.
 export const updates = [
   {
+    date: '2026-11-24',
+    label: 'Bangkok',
+    title: 'ICONSIAM countdown confirmed: 5 nights (27–31 Dec), 1,400 m of river fireworks and TREASURE on New Year\'s Eve.',
+    href: '/blog/bangkok-countdown-new-years-eve/',
+  },
+  {
+    date: '2026-11-24',
+    label: 'Singapore',
+    title: 'The JB–Singapore RTS Link is now expected to open in February 2027, not December. Fares still not announced.',
+    href: '/blog/rts-link-jb-singapore/',
+  },
+  {
     date: '2026-10-22',
     label: 'Malaysia',
     title: 'Visiting Malaysia for HYROX or Visit Malaysia 2026? Most foreign visitors must file the free MDAC arrival card within 3 days before landing.',
@@ -41,7 +53,8 @@ export const events = [
   { start: '2026-12-05', end: '2026-12-31', name: 'School holidays', place: 'Malaysia', href: '/blog/december-school-holidays-thailand-family-trips/' },
   { start: '2026-12-10', end: '2026-12-13', name: 'HYROX Kuala Lumpur', place: 'MITEC, KL', href: '/blog/hyrox-kuala-lumpur-2026-guide/' },
   { start: '2026-12-11', end: '2026-12-13', name: 'Tomorrowland Thailand', place: 'Pattaya', href: '/blog/tomorrowland-thailand-2026-guide/' },
-  { start: '2026-12-31', end: '2026-12-31', name: 'New Year Countdown', place: 'Bangkok', href: '/blog/bangkok-countdown-new-years-eve/' },
+  { start: '2026-12-27', end: '2026-12-31', name: 'Amazing Thailand Countdown', place: 'ICONSIAM, Bangkok', href: '/blog/bangkok-countdown-new-years-eve/' },
+  { start: '2027-02-06', end: '2027-02-07', name: 'Chinese New Year', place: 'Malaysia & region', href: '/blog/chinese-new-year-2027-trips/' },
 ];
 
 // The guides every first-timer should read before flying.

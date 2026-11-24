@@ -388,3 +388,69 @@ Reply: `https://trust-wise.org/blog/haze-malaysia-singapore-guide/?utm_source=th
 14. Stopped paying for 3 studio packages in KL. One app, spin + reformer + HYROX-style classes. Just watch out for the 12-hour rule ⏰👇
 15. Reformer Pilates first class: your legs will shake, you'll need grip socks, and NEVER book intermediate first. Beginner studios in KL 👇
 16. HYROX KL in ~7 weeks and the haze killed your outdoor runs? Treadmill at 1%, spin, reformer. Keep training indoors 👇 #HYROX
+
+---
+
+## Batch: 24 November 2026 (post these this week)
+
+**N1. RTS Link delay** 🔥 · topic: `Singapore`
+> If you were waiting to take the RTS Link to Singapore this December… it's not happening 😅
+>
+> JB → Woodlands in 5 minutes, immigration done once. But the opening has moved.
+>
+> New expected date + what the fare might be + the fastest way across until then 👇
+
+Reply: `https://trust-wise.org/blog/rts-link-jb-singapore/?utm_source=threads&utm_medium=social&utm_campaign=rts-link`
+
+---
+
+**N2. KL to Singapore** 🌿 · topic: `Singapore`
+> KL to Singapore, honest ranking:
+>
+> ✈️ Fastest: flight (but ~4 hrs door to door)
+> 🚌 Cheapest: bus (until you hit the Causeway jam)
+> 🚆 Most underrated: ETS to JB + RM5 Shuttle Tebrau
+>
+> And one free form that lookalike sites try to charge you for 👇
+
+Reply: `https://trust-wise.org/blog/kl-to-singapore/?utm_source=threads&utm_medium=social&utm_campaign=kl-to-singapore`
+
+---
+
+**N3. ICONSIAM countdown** 🔥 · topic: `Bangkok`
+> TREASURE is performing at Bangkok's New Year's Eve countdown 👀
+>
+> ICONSIAM is going big this year: 5 nights (27–31 Dec), drone shows every night, and 1.4 km of fireworks on the river.
+>
+> There's also a way to get into the concerts on 27–30 Dec, but it ends 13 Dec 👇
+
+Reply: `https://trust-wise.org/blog/bangkok-countdown-new-years-eve/?utm_source=threads&utm_medium=social&utm_campaign=countdown-2027`
+
+---
+
+**N4. CNY 2027** 🔥 · topic: `Chinese New Year`
+> CNY 2027 is Sat 6 – Sun 7 Feb.
+>
+> If you're not balik kampung this year, book your trip in December, not January. CNY week flights climb fast.
+>
+> 5 short trips that fit the long weekend (one doesn't need a flight) 👇
+
+Reply: `https://trust-wise.org/blog/chinese-new-year-2027-trips/?utm_source=threads&utm_medium=social&utm_campaign=cny-2027`
+
+---
+
+**N5. Reply bait** 💬 · topic: `Singapore`
+> KL to Singapore: bus, ETS train, flight or drive?
+>
+> Which one do you take and why? I'll share the full comparison in the replies 👇
+
+Reply (after people answer): `https://trust-wise.org/blog/kl-to-singapore/?utm_source=threads&utm_medium=social&utm_campaign=kl-sg-poll`
+
+---
+
+### X versions (link in a self-reply, `utm_source=x`)
+
+17. RTS Link JB–Woodlands won't open in Dec 2026. New target: Feb 2027, before Hari Raya. Fare still not announced. Fastest way across until then 👇
+18. KL → Singapore without a flight: ETS to JB Sentral (~4–5 hrs) + Shuttle Tebrau (5 min, RM5). Book both early, the shuttle sells out 👇
+19. ICONSIAM countdown 2027: 27–31 Dec, drones every night, 1.4 km of fireworks, TREASURE on the 31st 🎆👇 #Bangkok
+20. CNY 2027 = Sat 6 & Sun 7 Feb. Not going home? 5 short trips from Malaysia, book in December 🧧👇
